@@ -1,4 +1,4 @@
-# Portafolio Web Plantilla
+# Perfil de Instagram
 
 Esta es una pagina web creada después de dar una continuidad del curso de **CSS Grid Layout** de **Platzi** el cual puede ser visto a traves del [Siguiente Link](https://platzi.com/clases/css-grid-layout/). En la cual se simula el perfil de un usuario en **Instagram**.
 
