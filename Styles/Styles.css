@@ -151,6 +151,7 @@ nav input{
 
 .menu, .menu div{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
@@ -260,7 +261,7 @@ footer a{
         grid-template-rows: repeat(3, minmax(100px, 200px));
         gap: 3px;
     }
-    
+
     .profile-section{
         flex-direction: column;
         align-items: center;
@@ -276,6 +277,18 @@ footer a{
 
     .profile-statistics div{
         justify-content: center;
+    }
+
+    .post-image{
+        height: 200px;
+    }
+
+    .menu{
+        height: 100px;
+    }
+
+    .menu div{
+        height: 50%;
     }
 }
 
@@ -296,4 +309,7 @@ footer a{
         width: 60%;
     }
 
+    .post-image{
+        height: 200px;
+    }
 }
