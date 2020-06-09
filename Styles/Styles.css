@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+/* ------------------------------------ VARIABLES ------------------------------------ */
+:root{
+    --color-white: #fff;
+    --color-clear-gray: #fafafa;
+    --color-dark-gray: #DBDBDB;
+    --color-darkest-gray: #555;
+}
+/* ------------------------------------ REGLAS GENERALES ------------------------------------ */
+body{
+    background: var(--color-clear-gray);
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+
+.container{
+    max-width: 935px;
+    margin: 0 auto;
+}
+
+figure{
+    margin: 0;
+}
+/* ------------------------------------ REGLAS NAV ------------------------------------ */
+nav{
+    background-color: var(--color-white);
+    height: 55px;
+    border-bottom: solid 1px var(--color-dark-gray);
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav div{
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-page figure{
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+
+.logo-page figure img{
+    height: 38px;
+} 
+
+nav input{
+    background: var(--color-clear-gray);
+    color: #444;
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 4px;
+    width: 215px;
+    height: 23px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 80px;
+}
+
+::placeholder { 
+    color: #aaa;
+}
+
+.logo-options img{
+    width: 25px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.profile-img{
+    border-radius: 100%;
+}
+/* ------------------------------------ REGLAS PERFIL ------------------------------------ */
+.profile-section{
+    display: flex;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom: solid 1px var(--color-dark-gray);
+}
+
+.div-profile-img{
+    width: 33%;
+    text-align: center;
+}
+
+.div-profile-img img{
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.div-profile-img img:hover{
+    box-shadow: 0px 0px 18px 2px rgb(67, 146, 219);
+}
+
+.div-profile-details{
+    width: 46%;
+}
+
+.profile-name{
+    display: flex;
+    color: var(--color-darkest-gray);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.profile-name button{
+    background: var(--color-clear-gray);
+    border: 1px solid var(--color-dark-gray);
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--color-darkest-gray);
+    padding: 8px;
+}
+
+.profile-name img{
+    width: 40px;
+    cursor: pointer;
+}
+
+.profile-statistics, .profile-statistics div{
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+}
+
+.profile-statistics strong{
+    margin-right: 10px;
+}
+
+.profile-description{
+    margin: 15px;
+}
+.profile-description p{
+    margin: 3px 0px;
+}
+/* ------------------------------------ REGLAS MENU ------------------------------------ */
+.menu{
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-darkest-gray);
+    font-size: 14px;
+    height: 50px;
+}
+
+.menu, .menu div{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.menu div{
+    cursor: pointer;
+    height: 100%;
+}
+
+.menu div:hover{
+    color: #222;
+    border-top: 1px solid #222;
+    filter: brightness(0.25);
+}
+
+.menu figure{
+    margin-right: 5px;
+}
+
+.menu img{
+    width: 20px;
+}
+
+/* ------------------------------------ REGLAS LAYOUT ------------------------------------ */
+.layout-section{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 293px));
+    grid-template-rows: repeat(3, minmax(100px, 293px));
+    gap: 28px;
+}
+
+.post{
+    cursor: pointer;
+    position: relative;
+    display: block;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.post-image{
+    height: 293px;
+    display: flex;
+    align-items: center;
+}
+
+.post-image img{
+    width: 100%;
+    margin-top: -20px;
+}
+
+.post-cover, .post-cover div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-cover{
+    background: rgba(0, 0, 0, .4);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    transition: all .2s ease-in;
+    color: var(--color-white);
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}
+
+.post:hover .post-cover{
+    opacity: 1;
+}
+
+.post-cover span{
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+
+.post-cover img{
+    width: 25px;
+}
+/* ------------------------------------ REGLAS FOOTER ------------------------------------ */
+
+footer{
+    max-width: 1000px;
+    margin: 30px auto;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--color-darkest-gray);
+}
+
+footer a{
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: #00376B;
+    margin-right: 10px;
+}
+
+@media(max-width: 768px){
+    .search input{
+        display: none;
+    }
+
+    .layout-section{
+        gap: 3px;
+    }
+    .profile-statistics{
+        flex-wrap: wrap;
+    }
+
+    .div-profile-details{
+        width: 60%;
+    }
+}
